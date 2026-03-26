@@ -159,6 +159,18 @@ Push tags to remote
 
 `false`
 
+`--json`
+
+json format output
+
+`{
+  "current_version": "v0.2.1",
+  "next_version": "",
+  "release_type": "none",
+  "has_release": false,
+  "pushed": false
+}`
+
 `--version`
 
 git-semver Version

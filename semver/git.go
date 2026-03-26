@@ -2,7 +2,7 @@ package semver
 
 import (
 	"fmt"
-	"os"
+	"io"
 	"os/exec"
 	"strings"
 )
@@ -65,15 +65,15 @@ func CreateTag(repoPath string, v Version) error {
 	tag := fmt.Sprintf("v%d.%d.%d", v.Major, v.Minor, v.Patch)
 
 	cmd := exec.Command("git", "-C", repoPath, "tag", tag)
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+	cmd.Stdout = io.Discard
+	cmd.Stderr = io.Discard
 
 	return cmd.Run()
 }
 
 func PushTags(repoPath string) error {
 	cmd := exec.Command("git", "-C", repoPath, "push", "origin", "--tags")
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+	cmd.Stdout = io.Discard
+	cmd.Stderr = io.Discard
 	return cmd.Run()
 }
