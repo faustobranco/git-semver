@@ -97,7 +97,7 @@ Example:
 ## Installation
 
 ```bash
-go build -o git-semver
+go build -ldflags "-X main.version=v0.2.0" -o git-semver
 
 ```
 
@@ -159,6 +159,11 @@ Push tags to remote
 
 `false`
 
+`--version`
+
+git-semver Version
+
+`v0.0.0`
 ----------
 
 ## Requirements

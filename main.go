@@ -7,12 +7,20 @@ import (
 	"log"
 )
 
+var version = "dev"
+
 func main() {
 
 	repoPath := flag.String("repo", ".", "Path to git repository")
 	push := flag.Bool("push", false, "Push tags to remote")
+	showVersion := flag.Bool("version", false, "Show version")
 
 	flag.Parse()
+
+	if *showVersion {
+		fmt.Printf("git-semver version %s\n", version)
+		return
+	}
 
 	lastTag, hasTag, err := semver.GetLastTag(*repoPath)
 	if err != nil {
