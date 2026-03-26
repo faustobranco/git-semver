@@ -1,0 +1,101 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!e2e/src/resources/lib/*
+
+.env.vault
+
+
+### Allure ###
+e2e/.allure
+e2e/allure-report
+e2e/logs
+
+### Client ###
+
+# compiled output
+webapp/src/main/client/dist
+webapp/src/main/client/tmp
+webapp/src/main/client/out-tsc
+webapp/src/main/client/docs
+webapp/src/main/client/documentation
+webapp/src/main/client/.angular
+
+# dependencies
+webapp/src/main/client/node
+webapp/src/main/client/node_modules
+
+# misc
+webapp/src/main/client/.sass-cache
+webapp/src/main/client/connect.lock
+webapp/src/main/client/coverage
+webapp/src/main/client/libpeerconnection.log
+*.log
+webapp/src/main/client/typings
+
+# test artifacts
+webapp/src/main/client/*.xlsx
+
+# e2e
+webapp/src/main/client/e2e/*.js
+webapp/src/main/client/e2e/*.map
+
+# cypress
+reports/
+screenshots/
+videos/
+downloads/
+.cypress-cache/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Shared settings ###
+!prettier.xml
+!vcs.xml
+!codeStyles/*
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### VSCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+e2e/src/resources/lib/webdrivers/internetexplorer/IEDriverServer
+*.vscode
+
+.java-version
+
+#node_modules
+node_modules
+
+#secrets
+*.yaml.dec
+.gitsecret/keys/random_seed
+!*.secret
+webapp/src/main/resources/application-local-secrets.yaml
+webapp/src/main/resources/application-local-to-test-secrets.yaml
+webapp/src/main/resources/application-local-e2e-testing-secrets.yml
+/webapp/src/main/client/.node-version
